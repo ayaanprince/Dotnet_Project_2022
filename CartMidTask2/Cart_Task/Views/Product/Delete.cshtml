@@ -1,0 +1,33 @@
+﻿@model CartMidTask2.Models.Database.Product
+
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<div>
+    <table class="table table-bordered">
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Qty</th>
+        </tr>
+        <tr>
+            <td>@Model.Name</td>
+            <td>@Model.Price</td>
+            <td>@Model.Qty</td>
+
+        </tr>
+
+    </table>
+</div>
+<div>
+    <form action="/Product/Delete" method="post" class="card">
+        <input type="hidden" name="id" value="@Model.Id" class="form-control" />
+        <input type="hidden" name="temp" value="0" class="form-control" />
+        <input type="submit" value="Delete" />
+
+    </form>
+</div>

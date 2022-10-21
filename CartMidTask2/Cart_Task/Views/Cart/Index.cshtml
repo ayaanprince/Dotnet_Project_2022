@@ -1,0 +1,57 @@
+﻿@using CartMidTask2.Models.Database;
+@using System.Web.Script.Serialization;
+@{
+    dynamic cartDes;
+    if (Session["cart"] != null)
+    {
+        cartDes = new JavaScriptSerializer().Deserialize<List<Product>>(Session["cart"].ToString());
+    }
+    else
+    {
+        cartDes = null;
+    }
+
+}
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Cart</h2>
+<div>
+    <table class="table table-bordered">
+
+        @{
+            if (cartDes == null)
+            {
+                <tr>No items selected!</tr>
+            }
+            else
+            {
+
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                </tr>
+
+                foreach (Product p in cartDes)
+                {
+                    <tr>
+                        <td>@p.Name</td>
+                        <td>@p.Price</td>
+                    </tr>
+                }
+            }
+        }
+
+    </table>
+</div>
+<form action="/Cart/Index" method="post" class="card">
+
+    <h3>Write "Confirm" and select Order button!</h3>
+    <input type="text" name="temp" value="" placeholder="Write Confirm" class="form-control" />
+    <input type="submit" value="Order" />
+
+</form>
+<a href="/Product/Index">Continue Shopping</a>
+
