@@ -1,0 +1,14 @@
+﻿@model EF.Models.Database.Movy
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+<form action="/Movie/Create" method="post" class="card">
+    <input type="text" name="Name" value="@Model.name" placeholder="Name" class="form-control" />
+    @Html.ValidationMessageFor(model => model.name, "", new { @class = "text-danger" })
+    <input type="submit" value="Submit" />
+
+</form>
