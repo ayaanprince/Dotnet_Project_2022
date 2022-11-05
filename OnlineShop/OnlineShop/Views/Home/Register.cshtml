@@ -1,0 +1,33 @@
+﻿@model OnlineShop.ViewModels.UserLoginViewModel
+
+
+@{
+    ViewBag.Title = "Register";
+}
+
+<h2>Register</h2>
+
+<form action="/Home/Register" method="post" class="card">
+    <h2>Name</h2>
+    <input type="text" name="Name" value="@Model.Users.Name" placeholder="Name" class="form-control" />
+    @Html.ValidationMessageFor(model => model.Users.Name, "", new { @class = "text-danger" })
+ 
+    <h2>Email</h2>
+    <input type="text" name="Email" value="@Model.Users.Email" placeholder="Email" class="form-control" />
+    @Html.ValidationMessageFor(model => model.Users.Email, "", new { @class = "text-danger" })
+    <h2>Address</h2>
+    <input type="text" name="Address" value="@Model.Users.Address" placeholder="Address" class="form-control" />
+    @Html.ValidationMessageFor(model => model.Users.Address, "", new { @class = "text-danger" })
+    <h2>Username</h2>
+    <input type="text" name="Username" value="@Model.Login.Username" placeholder="Username" class="form-control" />
+    @Html.ValidationMessageFor(model => model.Login.Username, "", new { @class = "text-danger" })
+    <h2>Password</h2>
+    <input type="text" name="Password" value="@Model.Login.Password" class="form-control" />
+    @Html.ValidationMessageFor(model => model.Login.Password, "", new { @class = "text-danger" })
+    <h2>Retype Password</h2>
+    <input type="text" name="Password" value="@Model.Login.Password" class="form-control" />
+    @Html.ValidationMessageFor(model => model.Login.Password, "", new { @class = "text-danger" })
+
+    <input type="submit" value="Submit" />
+
+</form>

@@ -1,0 +1,72 @@
+﻿@using OnlineShop.Models.Database;
+@using System.Web.Script.Serialization;
+
+@{
+    EShopEntities db = new EShopEntities();
+    string pname;
+    decimal pprice;
+    dynamic cartDes;
+    if (Session["cart"] != null)
+    {
+        cartDes = new JavaScriptSerializer().Deserialize<List<Cart_Itemes>>(Session["cart"].ToString());
+    }
+    else
+    {
+        cartDes = null;
+    }
+
+}
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Cart</h2>
+<div>
+    <table class="table table-bordered">
+
+        @{
+            if (cartDes == null)
+            {
+                <tr>No items selected!</tr>
+            }
+            else
+            {
+
+                <tr>
+                    <th>Name</th>
+                    <th>Unit Price</th>
+                    <th>Quantity</th>
+                    <th>Add</th>
+                    <th>Total Price</th>
+                    <th>Action</th>
+                </tr>
+
+                foreach (Cart_Itemes p in cartDes)
+                {
+                    pname = (from pd in db.Products where pd.Id == p.Pid select pd.Name).FirstOrDefault();
+                    pprice = (from pd in db.Products where pd.Id == p.Pid select pd.SellPrice).FirstOrDefault();
+                    <tr>
+                        <td>@pname</td>
+                        <td>@pprice</td>
+                        <td>@p.Qty</td>
+                        <td><a href="/Cart/Add/@p.Pid">+1</a></td>
+                        <td>@p.ItemPrice</td>
+                        <td><a href="/Cart/Remove/@p.Pid">Remove</a></td>
+                    </tr>
+                }
+            }
+        }
+
+    </table>
+</div>
+<form action="/Cart/Index" method="post" class="card">
+
+    <h3>Enter Delivery Address</h3>
+    <input type="text" name="address" value="" placeholder="" class="form-control" />
+    <h3>Write "Confirm" and select Order button!</h3>
+    <input type="text" name="temp" value="" placeholder="Write Confirm" class="form-control" />
+    <input type="submit" value="Order" />
+
+</form>
+<a href="/Product/Index">Continue Shopping</a>

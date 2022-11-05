@@ -1,0 +1,40 @@
+﻿@model OnlineShop.Models.Database.Product
+@using OnlineShop.Models.Database;
+@{
+    EShopEntities db = new EShopEntities();
+    var catdata = db.Categories.ToList();
+}
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+<form action="/Product/Create" method="post" class="card">
+    <h2>Name</h2>
+    <input type="text" name="Name" value="@Model.Name" placeholder="Name" class="form-control" />
+    @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+    <h2>Category</h2>
+    <select name="Category">
+        @foreach (var c in catdata)
+        {
+            <option selected value="@c.Id">@c.Name</option>
+        }
+        <option selected disabled>-----</option>
+
+    </select>
+    @Html.ValidationMessageFor(model => model.Category, "", new { @class = "text-danger" })
+    <h2>Purchase Price</h2>
+    <input type="text" name="PurchasePrice" value="@Model.PurchasePrice" placeholder="Purchase Price" class="form-control" />
+    @Html.ValidationMessageFor(model => model.PurchasePrice, "", new { @class = "text-danger" })
+    <h2>Selling Price</h2>
+    <input type="text" name="SellPrice" value="@Model.SellPrice" placeholder="Selling Price" class="form-control" />
+    @Html.ValidationMessageFor(model => model.SellPrice, "", new { @class = "text-danger" })
+    <h2>Quantity</h2>
+    <input type="text" name="Quantity" value="@Model.Quantity" placeholder="Qty" class="form-control" />
+    @Html.ValidationMessageFor(model => model.Quantity, "", new { @class = "text-danger" })
+
+    <input type="submit" value="Submit" />
+
+</form>

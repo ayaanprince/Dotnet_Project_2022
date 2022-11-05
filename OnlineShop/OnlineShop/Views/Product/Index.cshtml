@@ -1,0 +1,37 @@
+﻿@model List<OnlineShop.Models.Database.Product>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Products</h2>
+
+<div>
+    <a href="/Cart/Index">Cart</a>
+    <table class="table table-bordered">
+        <tr>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Add</th>
+            <th>Go To</th>
+
+        </tr>
+        @foreach (var p in Model)
+        {
+            <tr>
+                <td>@p.Name</td>
+                <td>@p.Category1.Name</td>
+                <td>@p.SellPrice</td>
+                <td><a href="/Cart/Add/@p.Id">Add To Cart</a></td>
+                <td><a href="/Product/Edit/@p.Id">Edit</a> <a href="/Product/Delete/@p.Id">Delete</a></td>
+            </tr>
+        }
+
+    </table>
+</div>
+<form action="/Product/Index" method="post" class="card">
+    <input type="text" name="Nam" value="" placeholder="Search by Name" class="form-control" />
+    <input type="text" name="Price" value="" placeholder="Search by Price" class="form-control" />
+    <input type="submit" value="Search" />
+
+</form>

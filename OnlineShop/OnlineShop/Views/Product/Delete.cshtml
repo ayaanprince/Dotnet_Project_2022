@@ -1,0 +1,33 @@
+﻿@model OnlineShop.Models.Database.Product
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+<div>
+    <table class="table table-bordered">
+        <tr>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Purchase Price</th>
+            <th>Selling Price</th>
+            <th>Quantity</th>
+        </tr>
+        <tr>
+            <td>@Model.Name</td>
+            <td>@Model.Category1.Name</td>
+            <td>@Model.PurchasePrice</td>
+            <td>@Model.SellPrice</td>
+            <td>@Model.Quantity</td>
+        </tr>
+
+    </table>
+</div>
+<div>
+    <form action="/Product/Delete" method="post" class="card">
+        <input type="hidden" name="id" value="@Model.Id" class="form-control" />
+        <input type="hidden" name="temp" value="0" class="form-control" />
+        <input type="submit" value="Delete" />
+
+    </form>
+</div>
