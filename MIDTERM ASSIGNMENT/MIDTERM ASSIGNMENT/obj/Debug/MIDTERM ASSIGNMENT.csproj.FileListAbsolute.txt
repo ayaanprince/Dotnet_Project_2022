@@ -160,3 +160,7 @@ C:\Users\ampri\Downloads\Compressed\Advanced-.NET-main\MIDTERM ASSIGNMENT\MIDTER
 C:\Users\ampri\Downloads\Compressed\Advanced-.NET-main\MIDTERM ASSIGNMENT\MIDTERM ASSIGNMENT\obj\Debug\MIDTERM ASSIGNMENT.csproj.CopyComplete
 C:\Users\ampri\Downloads\Compressed\Advanced-.NET-main\MIDTERM ASSIGNMENT\MIDTERM ASSIGNMENT\obj\Debug\MIDTERM ASSIGNMENT.dll
 C:\Users\ampri\Downloads\Compressed\Advanced-.NET-main\MIDTERM ASSIGNMENT\MIDTERM ASSIGNMENT\obj\Debug\MIDTERM ASSIGNMENT.pdb
+I:\.Net\Dotnet_Project_2022\MIDTERM ASSIGNMENT\MIDTERM ASSIGNMENT\obj\Debug\MIDTERM ASSIGNMENT.csproj.AssemblyReference.cache
+I:\.Net\Dotnet_Project_2022\MIDTERM ASSIGNMENT\MIDTERM ASSIGNMENT\obj\Debug\MIDTERM ASSIGNMENT.csproj.CoreCompileInputs.cache
+I:\.Net\Dotnet_Project_2022\MIDTERM ASSIGNMENT\MIDTERM ASSIGNMENT\obj\Debug\MIDTERM ASSIGNMENT.dll
+I:\.Net\Dotnet_Project_2022\MIDTERM ASSIGNMENT\MIDTERM ASSIGNMENT\obj\Debug\MIDTERM ASSIGNMENT.pdb

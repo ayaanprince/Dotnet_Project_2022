@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\ampri\Downloads\Compressed\Advanced-.NET-main\MIDTERM ASSIGNMENT\MIDTERM ASSIGNMENT\Models\Model1.edmx'. 
+﻿// T4 code generation is enabled for model 'I:\.Net\Dotnet_Project_2022\MIDTERM ASSIGNMENT\MIDTERM ASSIGNMENT\DB\Model1.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

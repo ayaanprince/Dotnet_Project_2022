@@ -10,7 +10,7 @@
 //------------------------------------------------------------------------------
 
 
-namespace MIDTERM_ASSIGNMENT.Models
+namespace MIDTERM_ASSIGNMENT.DB
 {
 
 using System;
