@@ -1,0 +1,32 @@
+﻿@model  List<MIDTERM_ASSIGNMENT.Models.Employee>
+@{
+    ViewBag.Title = "Collect";
+}
+
+<h2>Collect</h2>
+<form action="/Zero/Collect" method="post">
+    <input type="text" name="Name" placeholder="Name of the food" class="form-control"/>
+    <input type="text" name="Price" placeholder="Price of the food" class="form-control"/>
+    <input type="text" name="Quantity" placeholder="Quantity of the food" class="form-control"/>
+    
+    <h3> Assign </h3>
+    <table class="table-bordered">
+        <tr>
+           <th>Name</th>
+           <th>Gender</th>
+           <th>Contact</th>
+           <th></th>
+        </tr>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Gender</td>
+                <td>@item.Contact</td>
+                <td><input type="checkbox" id="@item.Id" name="EmployeeId" value="@item.Id"/></td>
+            </tr>
+        }
+    </table>
+   <input type="submit" value="Create Order" />
+</form>
+
