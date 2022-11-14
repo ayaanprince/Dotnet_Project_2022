@@ -1,0 +1,28 @@
+﻿@model List<Zero_Hunger.Models.Collection>
+@{
+    ViewBag.Title = "Collected";
+}
+
+<h2>Collected</h2>
+<table class="table-bordered col-lg-4">
+    <tr>
+        <th>Request Id</th>
+        <th>Employee Id</th>
+        <th></th>
+    </tr>
+   @foreach(var item in Model)
+    {
+        <tr>
+            <td>
+                <form action="/Zero/RequestView" method="post">
+                    <input type="text" value="@item.RequestId" name="RequestId" />
+                    <input type="submit" value="View Request" />
+                </form>
+                <form action="/Zero/EmployeeView">
+                    <input type="text" value="@item.RequestId" name="RequestId" />
+                    <input type="submit" value="View Request" />
+                </form>
+            </td>
+        </tr>
+    }
+</table>

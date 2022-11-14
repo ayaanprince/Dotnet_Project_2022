@@ -1,8 +1,36 @@
-﻿
+﻿@model List<Zero_Hunger.Models.Employee>
 @{
     ViewBag.Title = "Assign";
 }
 
-<h2>Assign</h2>
-
-@
+<form action="/Zero/Assign" method="Post">
+    <table class="table-bordered col-lg-3">
+    <tr>
+       <td>@ViewBag.Rname</td>
+       <td>@ViewBag.Fname</td>
+       <td>@ViewBag.Q</td>
+       <td><input type="text" name="RequestId" value="@ViewBag.Id" class="invisible"/></td>
+    </tr>
+    </table>
+    <h2> Assign </h2>
+    <table class="table-bordered col-lg-4">
+        <tr>
+            <th> Name </th>
+            <th> Gender </th>
+            <th> Contact </th>
+            <th> </th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Gender</td>
+                <td>@item.Contact</td>
+                <td>
+                    <input type="checkbox" name="EmployeeId" value="@item.Id"/>
+                </td>
+            </tr>
+        }
+    </table>
+    <input type="submit" value="Assign" />
+</form>

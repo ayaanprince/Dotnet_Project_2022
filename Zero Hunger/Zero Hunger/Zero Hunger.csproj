@@ -215,6 +215,8 @@
     <Content Include="Views\Zero\AddEmployee.cshtml" />
     <Content Include="Views\Zero\ViewEmployee.cshtml" />
     <Content Include="Views\Zero\Assign.cshtml" />
+    <Content Include="Views\Zero\ViewRequest.cshtml" />
+    <Content Include="Views\Zero\Collected.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
