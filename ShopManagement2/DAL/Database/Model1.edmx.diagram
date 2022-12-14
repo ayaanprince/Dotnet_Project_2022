@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f6ec03b4fbff45469f42ed10e1e0f32f" Name="Diagram1">
+        <EntityTypeShape EntityType="ShopCasketModel.Cart" Width="1.5" PointX="9.75" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShopCasketModel.Category" Width="1.5" PointX="5.25" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShopCasketModel.Delivery" Width="1.5" PointX="9.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShopCasketModel.Login" Width="1.5" PointX="7.5" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShopCasketModel.Product" Width="1.5" PointX="7.5" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShopCasketModel.Record" Width="1.5" PointX="9.75" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShopCasketModel.ShopType" Width="1.5" PointX="3" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShopCasketModel.sysdiagram" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShopCasketModel.User" Width="1.5" PointX="0.75" PointY="2.625" IsExpanded="true" />
+        <AssociationConnector Association="ShopCasketModel.FK_Cart_Login" ManuallyRouted="false" />
+        <AssociationConnector Association="ShopCasketModel.FK_Categories_ShopType" ManuallyRouted="false" />
+        <AssociationConnector Association="ShopCasketModel.FK_Product_Categories" ManuallyRouted="false" />
+        <AssociationConnector Association="ShopCasketModel.FK_Delivery_Login" ManuallyRouted="false" />
+        <AssociationConnector Association="ShopCasketModel.FK_Delivery_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="ShopCasketModel.FK_Records_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="ShopCasketModel.FK_Records_User" ManuallyRouted="false" />
+        <AssociationConnector Association="ShopCasketModel.FK_ShopType_User" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

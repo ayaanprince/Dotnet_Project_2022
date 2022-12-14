@@ -1,0 +1,20 @@
+C:\Users\User\source\repos\ShopManagement2\DAL\bin\Debug\DAL.dll.config
+C:\Users\User\source\repos\ShopManagement2\DAL\bin\Debug\DAL.dll
+C:\Users\User\source\repos\ShopManagement2\DAL\bin\Debug\DAL.pdb
+C:\Users\User\source\repos\ShopManagement2\DAL\bin\Debug\EntityFramework.dll
+C:\Users\User\source\repos\ShopManagement2\DAL\bin\Debug\EntityFramework.xml
+C:\Users\User\source\repos\ShopManagement2\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\ShopManagement2\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\ShopManagement2\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\User\source\repos\ShopManagement2\DAL\obj\Debug\DAL.dll
+C:\Users\User\source\repos\ShopManagement2\DAL\obj\Debug\DAL.pdb
+G:\AIUB SEM 14\.NET\ShopManagement2\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+G:\AIUB SEM 14\.NET\ShopManagement2\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+G:\AIUB SEM 14\.NET\ShopManagement2\DAL\obj\Debug\DAL.dll
+G:\AIUB SEM 14\.NET\ShopManagement2\DAL\obj\Debug\DAL.pdb
+G:\AIUB SEM 14\.NET\ShopManagement2\DAL\bin\Debug\DAL.dll.config
+G:\AIUB SEM 14\.NET\ShopManagement2\DAL\bin\Debug\DAL.dll
+G:\AIUB SEM 14\.NET\ShopManagement2\DAL\bin\Debug\DAL.pdb
+G:\AIUB SEM 14\.NET\ShopManagement2\DAL\bin\Debug\EntityFramework.dll
+G:\AIUB SEM 14\.NET\ShopManagement2\DAL\bin\Debug\EntityFramework.xml
+G:\AIUB SEM 14\.NET\ShopManagement2\DAL\obj\Debug\DAL.csproj.CopyComplete

@@ -1,0 +1,24 @@
+C:\Users\User\source\repos\ShopManagement2\BLL\bin\Debug\BLL.dll
+C:\Users\User\source\repos\ShopManagement2\BLL\bin\Debug\BLL.pdb
+C:\Users\User\source\repos\ShopManagement2\BLL\bin\Debug\DAL.dll
+C:\Users\User\source\repos\ShopManagement2\BLL\bin\Debug\EntityFramework.dll
+C:\Users\User\source\repos\ShopManagement2\BLL\bin\Debug\DAL.pdb
+C:\Users\User\source\repos\ShopManagement2\BLL\bin\Debug\DAL.dll.config
+C:\Users\User\source\repos\ShopManagement2\BLL\bin\Debug\EntityFramework.xml
+C:\Users\User\source\repos\ShopManagement2\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\ShopManagement2\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\ShopManagement2\BLL\obj\Debug\BLL.csproj.CopyComplete
+C:\Users\User\source\repos\ShopManagement2\BLL\obj\Debug\BLL.dll
+C:\Users\User\source\repos\ShopManagement2\BLL\obj\Debug\BLL.pdb
+G:\AIUB SEM 14\.NET\ShopManagement2\BLL\bin\Debug\BLL.dll
+G:\AIUB SEM 14\.NET\ShopManagement2\BLL\bin\Debug\BLL.pdb
+G:\AIUB SEM 14\.NET\ShopManagement2\BLL\bin\Debug\DAL.dll
+G:\AIUB SEM 14\.NET\ShopManagement2\BLL\bin\Debug\EntityFramework.dll
+G:\AIUB SEM 14\.NET\ShopManagement2\BLL\bin\Debug\DAL.pdb
+G:\AIUB SEM 14\.NET\ShopManagement2\BLL\bin\Debug\DAL.dll.config
+G:\AIUB SEM 14\.NET\ShopManagement2\BLL\bin\Debug\EntityFramework.xml
+G:\AIUB SEM 14\.NET\ShopManagement2\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+G:\AIUB SEM 14\.NET\ShopManagement2\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+G:\AIUB SEM 14\.NET\ShopManagement2\BLL\obj\Debug\BLL.csproj.CopyComplete
+G:\AIUB SEM 14\.NET\ShopManagement2\BLL\obj\Debug\BLL.dll
+G:\AIUB SEM 14\.NET\ShopManagement2\BLL\obj\Debug\BLL.pdb
