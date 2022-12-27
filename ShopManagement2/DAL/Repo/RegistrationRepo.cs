@@ -11,7 +11,7 @@ namespace DAL.Repo
     {
         public static void Create(User us)
         {
-            ShopCasketEntities1 et = new ShopCasketEntities1();   
+            ShopCasketEntities et = new ShopCasketEntities();   
             et.Users.Add(us);
             et.SaveChanges();
         }

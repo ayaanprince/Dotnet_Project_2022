@@ -8,13 +8,13 @@ C:\Users\User\source\repos\ShopManagement2\DAL\obj\Debug\DAL.csproj.CoreCompileI
 C:\Users\User\source\repos\ShopManagement2\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\User\source\repos\ShopManagement2\DAL\obj\Debug\DAL.dll
 C:\Users\User\source\repos\ShopManagement2\DAL\obj\Debug\DAL.pdb
-G:\AIUB SEM 14\.NET\ShopManagement2\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
-G:\AIUB SEM 14\.NET\ShopManagement2\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
-G:\AIUB SEM 14\.NET\ShopManagement2\DAL\obj\Debug\DAL.dll
-G:\AIUB SEM 14\.NET\ShopManagement2\DAL\obj\Debug\DAL.pdb
-G:\AIUB SEM 14\.NET\ShopManagement2\DAL\bin\Debug\DAL.dll.config
-G:\AIUB SEM 14\.NET\ShopManagement2\DAL\bin\Debug\DAL.dll
-G:\AIUB SEM 14\.NET\ShopManagement2\DAL\bin\Debug\DAL.pdb
-G:\AIUB SEM 14\.NET\ShopManagement2\DAL\bin\Debug\EntityFramework.dll
-G:\AIUB SEM 14\.NET\ShopManagement2\DAL\bin\Debug\EntityFramework.xml
-G:\AIUB SEM 14\.NET\ShopManagement2\DAL\obj\Debug\DAL.csproj.CopyComplete
+I:\.Net\Dotnet_Project_2022\ShopManagement2\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+I:\.Net\Dotnet_Project_2022\ShopManagement2\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+I:\.Net\Dotnet_Project_2022\ShopManagement2\DAL\obj\Debug\DAL.dll
+I:\.Net\Dotnet_Project_2022\ShopManagement2\DAL\obj\Debug\DAL.pdb
+I:\.Net\Dotnet_Project_2022\ShopManagement2\DAL\bin\Debug\DAL.dll.config
+I:\.Net\Dotnet_Project_2022\ShopManagement2\DAL\bin\Debug\DAL.dll
+I:\.Net\Dotnet_Project_2022\ShopManagement2\DAL\bin\Debug\DAL.pdb
+I:\.Net\Dotnet_Project_2022\ShopManagement2\DAL\bin\Debug\EntityFramework.dll
+I:\.Net\Dotnet_Project_2022\ShopManagement2\DAL\bin\Debug\EntityFramework.xml
+I:\.Net\Dotnet_Project_2022\ShopManagement2\DAL\obj\Debug\DAL.csproj.CopyComplete

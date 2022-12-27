@@ -16,6 +16,7 @@ namespace DAL.Database
     {
         public User()
         {
+            this.Deliveries = new HashSet<Delivery>();
             this.Records = new HashSet<Record>();
             this.ShopTypes = new HashSet<ShopType>();
         }
@@ -27,6 +28,7 @@ namespace DAL.Database
         public string Type { get; set; }
         public string Address { get; set; }
     
+        public virtual ICollection<Delivery> Deliveries { get; set; }
         public virtual ICollection<Record> Records { get; set; }
         public virtual ICollection<ShopType> ShopTypes { get; set; }
     }

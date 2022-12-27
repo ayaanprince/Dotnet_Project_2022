@@ -12,9 +12,9 @@ namespace DAL.Database
     using System;
     using System.Collections.Generic;
     
-    public partial class Category
+    public partial class Catagory
     {
-        public Category()
+        public Catagory()
         {
             this.Products = new HashSet<Product>();
         }

@@ -8,6 +8,5 @@ namespace BLL.Services
 {
     public class CategoriesServices
     {
-       public static CategoriesModel
     }
 }

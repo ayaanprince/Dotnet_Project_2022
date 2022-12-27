@@ -11,14 +11,14 @@ namespace DAL.Repo
     {
         public static List<Record> GetUserRecords(int id)
         {
-            ShopCasketEntities1 ap = new ShopCasketEntities1();
+            ShopCasketEntities ap = new ShopCasketEntities();
             var data = (from e in ap.Records where e.UserId == id select e).ToList();
             return data;
         }
 
         public static int EditRecords(Record rd)
         {
-            ShopCasketEntities1 ap = new ShopCasketEntities1();
+            ShopCasketEntities ap = new ShopCasketEntities();
             var data = (from e in ap.Records where e.Id == rd.Id select e).FirstOrDefault();
             if (data.Id != rd.Id||data.UserId != rd.UserId || data.ProductId != rd.ProductId) return 0;
             ap.Entry(data).CurrentValues.SetValues(rd);
@@ -28,7 +28,7 @@ namespace DAL.Repo
 
         public static int deleteRecords(Record rd)
         {
-            ShopCasketEntities1 ap = new ShopCasketEntities1();
+            ShopCasketEntities ap = new ShopCasketEntities();
             var data = (from e in ap.Records where e.Id == rd.Id select e).FirstOrDefault();
             if (data.Id != rd.Id || data.UserId != rd.UserId || data.ProductId != rd.ProductId) return 0;
             ap.Records.Remove(data);

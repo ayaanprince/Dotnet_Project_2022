@@ -67,5 +67,111 @@ namespace BLL.Services
           return  AdminRepo.AdminEditUser(uk);
         }
 
+        public static int AdminDeleteUser(int id)
+        {
+            return AdminRepo.AdminDeleteUser(id);
+        }
+
+        public static List<ProductModel>AdminGetProduct()
+        {
+            var data = AdminRepo.AdminGetProduct();
+            List<ProductModel>li = new List<ProductModel>();    
+            foreach(Product p in data)
+            {
+                ProductModel pm = new ProductModel(); 
+                pm.Id = p.Id;   
+                pm.Name = p.Name;
+                pm.Price = p.Price; 
+                pm.CategoriesId = p.CategoriesId;
+                li.Add(pm);
+            }
+
+            return li;
+        }
+
+        public static int AdminEditProduct(ProductModel pm)
+        {
+            Product model = new Product();
+            model.Id = pm.Id;   
+            model.Name = pm.Name;
+            model.Price = pm.Price;
+            model.CategoriesId = pm.CategoriesId;
+            return AdminRepo.AdminEditProduct(model);
+        }
+
+        public static int AdminDeleteProduct(int id)
+        {
+            return AdminRepo.AdminDeleteProduct(id);
+        }
+
+        public static List<CategoriesModel> AdminGetCategory()
+        {
+            var data = AdminRepo.AdminGetCategories();
+            List<CategoriesModel> li = new List<CategoriesModel>();
+            foreach (Catagory p in data)
+            {
+                CategoriesModel pm = new CategoriesModel();
+               pm.Name=p.Name;  
+                pm.ShopId = p.ShopId;
+                pm.Type = p.Type;
+                pm.Id=p.Id;
+                li.Add(pm);
+            }
+
+            return li;
+        }
+
+        public static int AdminEditCategory(CategoriesModel pm)
+        {
+            Catagory model = new Catagory();
+
+            model.Id = pm.Id;
+            model.ShopId = pm.ShopId;   
+            model.Type = pm.Type;   
+            model.Name=pm.Name;
+           
+            return AdminRepo.AdminEditCategories(model);
+        }
+
+        public static int AdminDeleteCateGory(int id)
+        {
+            return AdminRepo.AdminDeleteCategories(id);
+        }
+
+        public static List<ShopTypeModel> AdminGetShopType()
+        {
+            var data = AdminRepo.AdminGetShopType();
+            List<ShopTypeModel> li = new List<ShopTypeModel>();
+            foreach (ShopType p in data)
+            {
+                ShopTypeModel pm = new ShopTypeModel();
+               pm.Id = p.Id;
+                pm.UserId = p.UserId;
+                pm.Name = p.Name;
+                pm.Type = p.Type;
+                li.Add(pm);
+            }
+
+            return li;
+        }
+
+        public static int AdminEditShopType(ShopTypeModel pm)
+        {
+            ShopType model = new ShopType();
+
+           model.Name = pm.Name;
+            model.Type = pm.Type;
+            model.Id=pm.Id;
+            model.UserId=pm.UserId; 
+
+            return AdminRepo.AdminEditShopType(model);
+        }
+
+        public static int AdminDeleteShopType(int id)
+        {
+            return AdminRepo.AdminDeleteShopType(id);
+        }
+
+
     }
 }

@@ -11,7 +11,7 @@
     <Property Name="UserId" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Login" Relationship="Self.FK_Cart_Login" FromRole="Cart" ToRole="Login" />
   </EntityType>
-  <EntityType Name="Category">
+  <EntityType Name="Catagory">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
@@ -19,8 +19,8 @@
     <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="ShopId" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="ShopType" Relationship="Self.FK_Categories_ShopType" FromRole="Categories" ToRole="ShopType" />
-    <NavigationProperty Name="Products" Relationship="Self.FK_Product_Categories" FromRole="Categories" ToRole="Product" />
+    <NavigationProperty Name="ShopType" Relationship="Self.FK_Catagories_ShopType" FromRole="Catagories" ToRole="ShopType" />
+    <NavigationProperty Name="Products" Relationship="Self.FK_Product_Catagories" FromRole="Catagories" ToRole="Product" />
   </EntityType>
   <EntityType Name="Delivery">
     <Key>
@@ -34,6 +34,7 @@
     <Property Name="Time" Type="DateTime" Nullable="false" Precision="0" />
     <NavigationProperty Name="Login" Relationship="Self.FK_Delivery_Login" FromRole="Delivery" ToRole="Login" />
     <NavigationProperty Name="Product" Relationship="Self.FK_Delivery_Product" FromRole="Delivery" ToRole="Product" />
+    <NavigationProperty Name="User" Relationship="Self.FK_Delivery_User" FromRole="Delivery" ToRole="User" />
   </EntityType>
   <EntityType Name="Login">
     <Key>
@@ -53,7 +54,7 @@
     <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Price" Type="Int32" Nullable="false" />
     <Property Name="CategoriesId" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Category" Relationship="Self.FK_Product_Categories" FromRole="Product" ToRole="Categories" />
+    <NavigationProperty Name="Catagory" Relationship="Self.FK_Product_Catagories" FromRole="Product" ToRole="Catagories" />
     <NavigationProperty Name="Deliveries" Relationship="Self.FK_Delivery_Product" FromRole="Product" ToRole="Delivery" />
     <NavigationProperty Name="Records" Relationship="Self.FK_Records_Product" FromRole="Product" ToRole="Records" />
   </EntityType>
@@ -77,7 +78,7 @@
     <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="UserId" Type="Int32" Nullable="false" />
     <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <NavigationProperty Name="Categories" Relationship="Self.FK_Categories_ShopType" FromRole="ShopType" ToRole="Categories" />
+    <NavigationProperty Name="Catagories" Relationship="Self.FK_Catagories_ShopType" FromRole="ShopType" ToRole="Catagories" />
     <NavigationProperty Name="User" Relationship="Self.FK_ShopType_User" FromRole="ShopType" ToRole="User" />
   </EntityType>
   <EntityType Name="sysdiagram">
@@ -100,6 +101,7 @@
     <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Deliveries" Relationship="Self.FK_Delivery_User" FromRole="User" ToRole="Delivery" />
     <NavigationProperty Name="Records" Relationship="Self.FK_Records_User" FromRole="User" ToRole="Records" />
     <NavigationProperty Name="ShopTypes" Relationship="Self.FK_ShopType_User" FromRole="User" ToRole="ShopType" />
   </EntityType>
@@ -115,23 +117,23 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Categories_ShopType">
+  <Association Name="FK_Catagories_ShopType">
     <End Role="ShopType" Type="Self.ShopType" Multiplicity="1" />
-    <End Role="Categories" Type="Self.Category" Multiplicity="*" />
+    <End Role="Catagories" Type="Self.Catagory" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="ShopType">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="Categories">
+      <Dependent Role="Catagories">
         <PropertyRef Name="ShopId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Product_Categories">
-    <End Role="Categories" Type="Self.Category" Multiplicity="1" />
+  <Association Name="FK_Product_Catagories">
+    <End Role="Catagories" Type="Self.Catagory" Multiplicity="1" />
     <End Role="Product" Type="Self.Product" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Categories">
+      <Principal Role="Catagories">
         <PropertyRef Name="Id" />
       </Principal>
       <Dependent Role="Product">
@@ -147,7 +149,7 @@
         <PropertyRef Name="Id" />
       </Principal>
       <Dependent Role="Delivery">
-        <PropertyRef Name="ShopId" />
+        <PropertyRef Name="CustomerId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -160,6 +162,18 @@
       </Principal>
       <Dependent Role="Delivery">
         <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Delivery_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="Delivery" Type="Self.Delivery" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Delivery">
+        <PropertyRef Name="ShopId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -199,9 +213,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="ShopCasketEntities1" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="ShopCasketEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Carts" EntityType="Self.Cart" />
-    <EntitySet Name="Categories" EntityType="Self.Category" />
+    <EntitySet Name="Catagories" EntityType="Self.Catagory" />
     <EntitySet Name="Deliveries" EntityType="Self.Delivery" />
     <EntitySet Name="Logins" EntityType="Self.Login" />
     <EntitySet Name="Products" EntityType="Self.Product" />
@@ -213,12 +227,12 @@
       <End Role="Login" EntitySet="Logins" />
       <End Role="Cart" EntitySet="Carts" />
     </AssociationSet>
-    <AssociationSet Name="FK_Categories_ShopType" Association="Self.FK_Categories_ShopType">
+    <AssociationSet Name="FK_Catagories_ShopType" Association="Self.FK_Catagories_ShopType">
       <End Role="ShopType" EntitySet="ShopTypes" />
-      <End Role="Categories" EntitySet="Categories" />
+      <End Role="Catagories" EntitySet="Catagories" />
     </AssociationSet>
-    <AssociationSet Name="FK_Product_Categories" Association="Self.FK_Product_Categories">
-      <End Role="Categories" EntitySet="Categories" />
+    <AssociationSet Name="FK_Product_Catagories" Association="Self.FK_Product_Catagories">
+      <End Role="Catagories" EntitySet="Catagories" />
       <End Role="Product" EntitySet="Products" />
     </AssociationSet>
     <AssociationSet Name="FK_Delivery_Login" Association="Self.FK_Delivery_Login">
@@ -227,6 +241,10 @@
     </AssociationSet>
     <AssociationSet Name="FK_Delivery_Product" Association="Self.FK_Delivery_Product">
       <End Role="Product" EntitySet="Products" />
+      <End Role="Delivery" EntitySet="Deliveries" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Delivery_User" Association="Self.FK_Delivery_User">
+      <End Role="User" EntitySet="Users" />
       <End Role="Delivery" EntitySet="Deliveries" />
     </AssociationSet>
     <AssociationSet Name="FK_Records_Product" Association="Self.FK_Records_Product">

@@ -11,13 +11,13 @@ namespace DAL.Repo
     {
         public static User Get(string name,string password)
         {
-            ShopCasketEntities1 db = new ShopCasketEntities1();
+            ShopCasketEntities db = new ShopCasketEntities();
             var data = (from e in db.Users where (e.Name.Equals(name) && e.Password.Equals(password)) select e) .FirstOrDefault();
             return data;
         }
         public static void UserLogin(int id)
         {
-            ShopCasketEntities1 db = new ShopCasketEntities1();
+            ShopCasketEntities db = new ShopCasketEntities();
             var data = (from e in db.Users where (e.Id == id) select e).FirstOrDefault();
             string name  = data.Name;   
             string password = data.Password;

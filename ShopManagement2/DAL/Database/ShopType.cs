@@ -16,7 +16,7 @@ namespace DAL.Database
     {
         public ShopType()
         {
-            this.Categories = new HashSet<Category>();
+            this.Catagories = new HashSet<Catagory>();
         }
     
         public int Id { get; set; }
@@ -24,7 +24,7 @@ namespace DAL.Database
         public int UserId { get; set; }
         public string Type { get; set; }
     
-        public virtual ICollection<Category> Categories { get; set; }
+        public virtual ICollection<Catagory> Catagories { get; set; }
         public virtual User User { get; set; }
     }
 }

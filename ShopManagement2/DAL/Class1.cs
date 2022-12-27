@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DAL.Interfaces
+namespace DAL
 {
-    public interface IAuth<CLASS, X, RET>
+    public class Class1
     {
-        RET Okay(CLASS obj);
     }
 }

@@ -10,7 +10,7 @@
     <Property Name="ProductQuantity" Type="int" Nullable="false" />
     <Property Name="UserId" Type="int" Nullable="false" />
   </EntityType>
-  <EntityType Name="Categories">
+  <EntityType Name="Catagories">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
@@ -99,14 +99,14 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Categories_ShopType">
+  <Association Name="FK_Catagories_ShopType">
     <End Role="ShopType" Type="Self.ShopType" Multiplicity="1" />
-    <End Role="Categories" Type="Self.Categories" Multiplicity="*" />
+    <End Role="Catagories" Type="Self.Catagories" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="ShopType">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="Categories">
+      <Dependent Role="Catagories">
         <PropertyRef Name="ShopId" />
       </Dependent>
     </ReferentialConstraint>
@@ -119,7 +119,7 @@
         <PropertyRef Name="Id" />
       </Principal>
       <Dependent Role="Delivery">
-        <PropertyRef Name="ShopId" />
+        <PropertyRef Name="CustomerId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -135,11 +135,23 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Product_Categories">
-    <End Role="Categories" Type="Self.Categories" Multiplicity="1" />
+  <Association Name="FK_Delivery_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="Delivery" Type="Self.Delivery" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Delivery">
+        <PropertyRef Name="ShopId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_Catagories">
+    <End Role="Catagories" Type="Self.Catagories" Multiplicity="1" />
     <End Role="Product" Type="Self.Product" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Categories">
+      <Principal Role="Catagories">
         <PropertyRef Name="Id" />
       </Principal>
       <Dependent Role="Product">
@@ -185,7 +197,7 @@
   </Association>
   <EntityContainer Name="ShopCasketModelStoreContainer">
     <EntitySet Name="Cart" EntityType="Self.Cart" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Categories" EntityType="Self.Categories" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Catagories" EntityType="Self.Catagories" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Delivery" EntityType="Self.Delivery" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Login" EntityType="Self.Login" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
@@ -197,9 +209,9 @@
       <End Role="Login" EntitySet="Login" />
       <End Role="Cart" EntitySet="Cart" />
     </AssociationSet>
-    <AssociationSet Name="FK_Categories_ShopType" Association="Self.FK_Categories_ShopType">
+    <AssociationSet Name="FK_Catagories_ShopType" Association="Self.FK_Catagories_ShopType">
       <End Role="ShopType" EntitySet="ShopType" />
-      <End Role="Categories" EntitySet="Categories" />
+      <End Role="Catagories" EntitySet="Catagories" />
     </AssociationSet>
     <AssociationSet Name="FK_Delivery_Login" Association="Self.FK_Delivery_Login">
       <End Role="Login" EntitySet="Login" />
@@ -209,8 +221,12 @@
       <End Role="Product" EntitySet="Product" />
       <End Role="Delivery" EntitySet="Delivery" />
     </AssociationSet>
-    <AssociationSet Name="FK_Product_Categories" Association="Self.FK_Product_Categories">
-      <End Role="Categories" EntitySet="Categories" />
+    <AssociationSet Name="FK_Delivery_User" Association="Self.FK_Delivery_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Delivery" EntitySet="Delivery" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_Catagories" Association="Self.FK_Product_Catagories">
+      <End Role="Catagories" EntitySet="Catagories" />
       <End Role="Product" EntitySet="Product" />
     </AssociationSet>
     <AssociationSet Name="FK_Records_Product" Association="Self.FK_Records_Product">

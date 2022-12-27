@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="ShopCasketModelStoreContainer" CdmEntityContainer="ShopCasketEntities1">
+  <EntityContainerMapping StorageEntityContainer="ShopCasketModelStoreContainer" CdmEntityContainer="ShopCasketEntities">
     <EntitySetMapping Name="Carts">
       <EntityTypeMapping TypeName="ShopCasketModel.Cart">
         <MappingFragment StoreEntitySet="Cart">
@@ -12,9 +12,9 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Categories">
-      <EntityTypeMapping TypeName="ShopCasketModel.Category">
-        <MappingFragment StoreEntitySet="Categories">
+    <EntitySetMapping Name="Catagories">
+      <EntityTypeMapping TypeName="ShopCasketModel.Catagory">
+        <MappingFragment StoreEntitySet="Catagories">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Type" ColumnName="Type" />

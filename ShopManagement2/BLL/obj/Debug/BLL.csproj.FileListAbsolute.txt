@@ -10,15 +10,15 @@ C:\Users\User\source\repos\ShopManagement2\BLL\obj\Debug\BLL.csproj.CoreCompileI
 C:\Users\User\source\repos\ShopManagement2\BLL\obj\Debug\BLL.csproj.CopyComplete
 C:\Users\User\source\repos\ShopManagement2\BLL\obj\Debug\BLL.dll
 C:\Users\User\source\repos\ShopManagement2\BLL\obj\Debug\BLL.pdb
-G:\AIUB SEM 14\.NET\ShopManagement2\BLL\bin\Debug\BLL.dll
-G:\AIUB SEM 14\.NET\ShopManagement2\BLL\bin\Debug\BLL.pdb
-G:\AIUB SEM 14\.NET\ShopManagement2\BLL\bin\Debug\DAL.dll
-G:\AIUB SEM 14\.NET\ShopManagement2\BLL\bin\Debug\EntityFramework.dll
-G:\AIUB SEM 14\.NET\ShopManagement2\BLL\bin\Debug\DAL.pdb
-G:\AIUB SEM 14\.NET\ShopManagement2\BLL\bin\Debug\DAL.dll.config
-G:\AIUB SEM 14\.NET\ShopManagement2\BLL\bin\Debug\EntityFramework.xml
-G:\AIUB SEM 14\.NET\ShopManagement2\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
-G:\AIUB SEM 14\.NET\ShopManagement2\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
-G:\AIUB SEM 14\.NET\ShopManagement2\BLL\obj\Debug\BLL.csproj.CopyComplete
-G:\AIUB SEM 14\.NET\ShopManagement2\BLL\obj\Debug\BLL.dll
-G:\AIUB SEM 14\.NET\ShopManagement2\BLL\obj\Debug\BLL.pdb
+I:\.Net\Dotnet_Project_2022\ShopManagement2\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+I:\.Net\Dotnet_Project_2022\ShopManagement2\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+I:\.Net\Dotnet_Project_2022\ShopManagement2\BLL\obj\Debug\BLL.dll
+I:\.Net\Dotnet_Project_2022\ShopManagement2\BLL\obj\Debug\BLL.pdb
+I:\.Net\Dotnet_Project_2022\ShopManagement2\BLL\bin\Debug\BLL.dll
+I:\.Net\Dotnet_Project_2022\ShopManagement2\BLL\bin\Debug\BLL.pdb
+I:\.Net\Dotnet_Project_2022\ShopManagement2\BLL\bin\Debug\DAL.dll
+I:\.Net\Dotnet_Project_2022\ShopManagement2\BLL\bin\Debug\EntityFramework.dll
+I:\.Net\Dotnet_Project_2022\ShopManagement2\BLL\bin\Debug\DAL.pdb
+I:\.Net\Dotnet_Project_2022\ShopManagement2\BLL\bin\Debug\DAL.dll.config
+I:\.Net\Dotnet_Project_2022\ShopManagement2\BLL\bin\Debug\EntityFramework.xml
+I:\.Net\Dotnet_Project_2022\ShopManagement2\BLL\obj\Debug\BLL.csproj.CopyComplete

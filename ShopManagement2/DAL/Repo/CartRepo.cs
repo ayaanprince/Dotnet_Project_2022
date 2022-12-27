@@ -11,7 +11,7 @@ namespace DAL.Repo
     {
         public static int GetLogInId(int id)
         {
-            ShopCasketEntities1 ap = new ShopCasketEntities1();
+            ShopCasketEntities ap = new ShopCasketEntities();
             string name = (from e in ap.Users where e.Id == id select e.Name).First();
             string password = (from e in ap.Users where e.Id == id select e.Password).First();
             var data = (from e in ap.Logins where e.Name == name && e.Password.Equals(password) select e.Id).FirstOrDefault();
@@ -20,21 +20,21 @@ namespace DAL.Repo
 
         public static int GetProductId(int id)
         {
-            ShopCasketEntities1 ap = new ShopCasketEntities1();
+            ShopCasketEntities ap = new ShopCasketEntities();
             var data = (from e in ap.Products where e.Id == id select e.Id).FirstOrDefault();
                 return data;
         }
 
         public static List<Cart> Get(int id)
         {
-            ShopCasketEntities1 ap = new ShopCasketEntities1();
+            ShopCasketEntities ap = new ShopCasketEntities();
             var data = (from e in ap.Carts where e.UserId == id select e).ToList();
             return data;
         }
 
         public static  void Create_cart(int Product_id,int UserId,int quantity)
         {
-            ShopCasketEntities1 ap = new ShopCasketEntities1();
+            ShopCasketEntities ap = new ShopCasketEntities();
             string productName = (from e in ap.Products where e.Id == Product_id select  e.Name).First();
             int productPrice = (from e in ap.Products where e.Id == Product_id select e.Price).First();
 
@@ -51,7 +51,7 @@ namespace DAL.Repo
 
         public static int Edit_Cart(Cart cs)
         {
-            ShopCasketEntities1 ap = new ShopCasketEntities1();
+            ShopCasketEntities ap = new ShopCasketEntities();
             var data = (from e in ap.Carts where e.Id == cs.Id select e).FirstOrDefault();
             if (data.Id != cs.Id) return 0;
             ap.Entry(data).CurrentValues.SetValues(cs);
@@ -61,7 +61,7 @@ namespace DAL.Repo
 
         public static int Delete_cart(Cart cs)
         {
-            ShopCasketEntities1 ap = new ShopCasketEntities1();
+            ShopCasketEntities ap = new ShopCasketEntities();
             var data = (from e in ap.Carts where e.Id == cs.Id select e).FirstOrDefault();
             if (data.Id != cs.Id) return 0;
              ap.Carts.Remove(data);
@@ -71,7 +71,7 @@ namespace DAL.Repo
 
         public static int CheckOut(int id)
         {
-            ShopCasketEntities1 ap = new ShopCasketEntities1();
+            ShopCasketEntities ap = new ShopCasketEntities();
             var data = (from e in ap.Carts where e.UserId == id select e).ToList();
             if (data.Count == 0) return 0;
             foreach (var item in data)

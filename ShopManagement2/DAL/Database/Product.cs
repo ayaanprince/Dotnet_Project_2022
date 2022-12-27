@@ -25,7 +25,7 @@ namespace DAL.Database
         public int Price { get; set; }
         public int CategoriesId { get; set; }
     
-        public virtual Category Category { get; set; }
+        public virtual Catagory Catagory { get; set; }
         public virtual ICollection<Delivery> Deliveries { get; set; }
         public virtual ICollection<Record> Records { get; set; }
     }

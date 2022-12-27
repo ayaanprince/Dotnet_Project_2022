@@ -13,10 +13,10 @@ namespace DAL.Database
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ShopCasketEntities1 : DbContext
+    public partial class ShopCasketEntities : DbContext
     {
-        public ShopCasketEntities1()
-            : base("name=ShopCasketEntities1")
+        public ShopCasketEntities()
+            : base("name=ShopCasketEntities")
         {
         }
     
@@ -26,7 +26,7 @@ namespace DAL.Database
         }
     
         public DbSet<Cart> Carts { get; set; }
-        public DbSet<Category> Categories { get; set; }
+        public DbSet<Catagory> Catagories { get; set; }
         public DbSet<Delivery> Deliveries { get; set; }
         public DbSet<Login> Logins { get; set; }
         public DbSet<Product> Products { get; set; }
